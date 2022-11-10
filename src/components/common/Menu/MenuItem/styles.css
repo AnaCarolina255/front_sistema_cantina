@@ -1,0 +1,50 @@
+ .item{
+    width: 230px;
+    height: 300px;
+    padding: 0 0.8rem 0.8rem 0.8rem;
+    background-color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 1rem;
+    
+}
+
+ .item:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+.container-item{
+    margin-left: 8rem;
+    display: flex;
+}
+.imagem-prod{
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-prod img{
+    width: 135px;
+    height: 120px;
+    margin-top: 1rem;
+    border-radius: 5%;
+}
+
+.nome-prod{
+    text-align: center;
+    font-size: larger;
+    height: 20%;
+}
+
+.preco-prod{
+    display: flex;
+    justify-content: end;
+    font-weight: 600;
+}
+
+.categoria-prod{
+    display: flex;
+    justify-content: end;
+    font-weight: 300;
+    
+}

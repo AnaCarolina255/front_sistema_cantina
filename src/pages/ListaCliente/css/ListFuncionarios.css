@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+
+.numContas{
+    display: inline;
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 120px;
+    margin-top: 1rem;
+    margin-bottom: 50px;
+    background-color: #ff8533;
+    margin-left: 20%;
+    border-radius: 1rem;
+    color: black;
+    padding: 0.2rem 0.8rem;
+    cursor: pointer;
+}
+
+.numContas:hover{
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1 );
+}
+
+
+
+.numContas p{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.busca{
+   
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 30%;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+	background-image: url(https://wp-themes.com/wp-content/themes/twentythirteen/images/search-icon.png);
+	background-position: 15px  center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	padding: 0 0 0 34px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+	width:51px;
+   cursor: pointer;
+}
+
+.busca:focus{
+    background-color: white;
+	border: none;
+	cursor: text;
+	outline: 0;
+	width: 450px;
+    padding-left: 45px;
+    border-radius: 20px;
+    color:black;
+    padding-right: 15px;
+}
+
+.cont-list{
+    margin-left: 50%;
+    margin-bottom: 3rem;
+}
+
+.div_informacoes{
+    background-color: white;
+    width: 750px;
+    height: 100px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.div_informacoes:hover{
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3 );
+}
+
+.div_informacoes label:hover{
+
+    color: #ff8533;
+    cursor: pointer;
+}
+
+.nome{
+    position: relative;
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+.email{
+    position: absolute;
+    float: left;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #B3B3B3;
+    
+}
+.tipo{
+    position: relative;
+    float: right;
+    top: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    right: 40px ;
+    color: #8C8C8C;
+}

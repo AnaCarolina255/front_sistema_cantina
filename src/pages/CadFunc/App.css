@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+.container-fun{
+  background-color: #fff;
+}
+
+.forms-container-fun{
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+.input-field-fun small{
+  visibility: hidden;
+  position: absolute;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.signin-signup-fun{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+.content2{
+  position: absolute;
+  margin-top: 8%;
+  margin-left: -80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.content2 h3{
+  font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.content2 p{
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+.icone-voltar2{
+  position: absolute;
+  margin-top: -25%;
+  margin-left: -98%;
+  z-index: 1000;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+
+.emptyText{
+  color: red;
+  width: 54%;
+  font-size: 12px;
+}
+
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-in-form-fun{
+  z-index: 2;
+  width: fit-content;
+  
+}
+
+.title-fun{
+  font-size: 2.2em;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field-fun{
+  max-width: 400px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border: none;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#text{
+  display: block;
+  color: #999;
+  font-weight: 500;
+  padding: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75em;
+}
+
+.input-field-fun i{
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field-fun input{
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+
+}
+
+.input-field-fun input::placeholder{
+  color: #aaa;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.cargo{
+  padding: 14px 76px;
+  color: #333;
+  background-color: #eeeeee;
+  border: none;
+  cursor: pointer;
+  border-radius: 55px;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.cargo:focus,
+.cargo:hover{
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+
+.btn {
+  width: 150px;
+  background-color: #ff8533;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  background-color: #d8702a;
+}
+
+.container-fun::before{
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #ff8533 0%, #ff8533 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 892px){
+  .container-fun{
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup-fun{
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+  .container-fun:before{
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+  .emptyText{
+    max-width: 100%;
+  }
+  .input-field-fun{
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .form-sign-in-form-fun{
+    max-width: 500px;
+    display: contents;
+  }
+  .cargo{
+    width: fit-content;
+  }
+}
+
+@media (max-width: 570px){
+  form{
+    padding: 0 1.5rem;
+  }
+  .container-fun{
+    padding: 1.5rem;
+  }
+  .container-fun:before{
+    bottom: 72%;
+    left: 50%;
+  }
+  .input-field-fun{
+    max-width: 400px;
+    width: 100%;
+  }
+
+  
+}

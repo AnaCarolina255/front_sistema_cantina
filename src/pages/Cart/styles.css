@@ -1,0 +1,37 @@
+.cart-header {
+    padding-top: 0.5rem;
+}
+
+.orders {
+    min-height: calc(100vh - 15rem);
+}
+
+.orders-heading{
+    text-align: center;
+}
+
+.orders-heading,
+.orders-total {
+    width: 100%;
+    max-width: 580px;
+    padding-right: 1rem;
+}
+
+.orders-heading{
+    border-bottom: 2px solid #000;
+    margin-bottom: 5.5rem;
+}
+
+.orders-total{
+    border-top: 2px solid #000;
+    text-align: right;
+    margin-left: auto;
+    margin-top: 3rem;
+}
+
+.ticket{
+    height: 100vh;
+    display: block;
+    margin-left: 70%;
+    margin-top: -44%;
+}

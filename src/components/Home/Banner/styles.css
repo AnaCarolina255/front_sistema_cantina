@@ -1,0 +1,265 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: .1rem;
+    height: 6vh;
+    background-color: #ff8533;
+    width: 105.3%;
+    z-index: 1000;
+    position: fixed;
+}
+
+.sino{
+    color: #fff;
+    position: absolute;
+    margin-left: 65vw;
+    font-size: 30px;
+    margin-top: -1.8vw;
+    cursor: pointer;
+}
+
+.menu-ticket{
+    width: 70vh;
+    margin-top: 5.5rem;
+    margin-left: 63vw;
+    height: 90vh;
+    background-color: #fff;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.menu-ticket p{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.menu-ticket .item{
+    height: 0px;
+    width: 89%;
+}
+
+.menu-ticket .item:hover{
+    transition: none;
+    transform: none;
+}
+
+.menu-ticket h1{
+    margin-left: 1em;
+}
+
+.menu-ticket h3{
+    text-align: center;
+    font-weight: 500;
+}
+
+.menu-ticket hr{
+    height: 3.5px;
+    background-color: #000;
+}
+
+.linha{
+    border: 1px solid #000;
+    width: 85%;
+    margin-left: 6%;
+}
+
+.cont-btn-ticket{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-ticket{
+    width: 90px;
+    border-radius: 100px;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-ticket:hover{
+    background-color: rgba(0, 0, 0, 0.747);
+    color: #fff;
+}
+
+.search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 65%;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.search-icon::before {
+    content: '';
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    border: 2px solid #ff8533;
+}
+
+.search-icon::after {
+    content: '';
+    width: 20%;
+    height: 2px;
+    background-color: #ff8533;
+}
+
+.search-input {
+    margin-top: .4rem;
+    width: 40vw;
+    height: 90%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+}
+
+.box_menu .sidebar_menu{
+    height: 150vh;
+    width: 330px;
+    background-color: #ff8533;
+    position: fixed;
+    overflow: hidden;
+    left: -330px;
+    transition: all 0.3s linear;
+}
+
+.box_menu .sidebar_titulo{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 2px 4px #6e38382e;
+}
+
+.box_menu .sidebar_titulo a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    position: absolute;
+    left: 65px;
+    line-height: 60px;
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.sidebar_menu .menu li{
+    margin: 10px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar_menu .menu li:hover{
+    background-color: #db7430;
+}
+
+.sidebar_menu .menu i{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+.sidebar_menu .menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.box_menu .menu-icon{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    right: 30vw;
+    bottom: -13px;
+    line-height: 55px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+
+@media(max-width:650px){
+    .search-container {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .search-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    
+    .search-icon::before {
+        content: '';
+        width: 25%;
+        height: 25%;
+        border-radius: 50%;
+        border: 2px solid #39AC39;
+    }
+    
+    .search-icon::after {
+        content: '';
+        width: 20%;
+        height: 2px;
+        background-color: #39AC39;
+    }
+    
+    .search-input {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        padding-left: 40px;
+        transition: all 0.7s;
+    }
+    
+    .search-input:focus {
+        width: 250px;
+        box-shadow: 2px 2px 5px #777;
+    }
+    
+    .search-input:valid {
+        width: 250px;
+    }
+
+}

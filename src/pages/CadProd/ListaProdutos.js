@@ -6,6 +6,7 @@ function Lista() {
   const [produtos, setProdutos] = useState([]);
   const total = produtoAdd.reduce((soma, item) => item.preco + soma, 0)
 
+
   const deletarProduto = (idProduto) => {
     fetch(`http://10.92.198.22:8080/api/produto/deletar/${idProduto}`, {
       method: 'DELETE',
@@ -16,6 +17,23 @@ function Lista() {
     })
     
   }
+
+    //inserir input da reserva
+    const [valRes, setValRes]=useState([]);
+    const handleAddRes=()=>{
+      const abcd=[...valRes,[]]
+      setValRes(abcd)
+    }
+    const handleChangeRes=(onChangeValue,i)=>{
+      const inputRes=[...val]
+      inputRes[i]=onChangeValue.target.value;
+      setValRes(inputRes)
+    }
+    const handleDeleteRes=(i)=>{
+      const deletValRes=[...val]
+      deletValRes.splice(i,1)
+      setValRes(deletValRes)
+    }
 
   //inserir input da conta
   const [val, setVal]=useState([]);
@@ -34,14 +52,11 @@ function Lista() {
     setVal(deletVal)
   }
 
+  //adicionar o produto
   function Adicionar(produto) {
     setProdutoAdd((produtoAdd) => [...produtoAdd, produto]);
     console.log(produtoAdd);
   }
-
-  function Limpar(){
-    produtos.value = '';
-}
 
   useEffect(() => {
     fetch("http://10.92.198.22:8080/api/produto/findAll")
@@ -90,12 +105,12 @@ function Lista() {
 
         <hr />
         <h4>Total: {total}</h4>
-        <h4>Valor Pago: <input className="inp-vp" type='text'/></h4>
-        <h4>Troco:</h4>
+        <h4>Valor Pago: <input className="inp-vp" id="valor_pago" type='text'/></h4>
+        <h4>Troco: </h4>
         <hr />
         <div className="cont-btn-ticket">
           <button className="btn-ticket">Finalizar</button>
-          <button className="btn-ticket" onClick={Limpar()}>Limpar</button>
+          <button className="btn-ticket">Limpar</button>
           <>
           <button onClick={()=>handleAdd()} className="btn-ticket">Conta</button>
           {val.map((data,i)=>{
@@ -108,7 +123,20 @@ function Lista() {
               )
           })}
           </>
-          <button className="btn-ticket">Reserva</button>
+          <>
+          <button onClick={()=>handleAddRes()} className="btn-ticket">Reserva</button>
+          {valRes.map((data,i)=>{
+            return(
+              <div className="input-reserva">
+              <h5 className="h5-nif">Data</h5>
+              <input type="datetime-local" className="inp-nif" value={data} onChange={e=>handleChangeRes(e,i)}/>
+              <h5 className="h5-nif">Por quem foi feito</h5>
+              <input type="text" className="inp-nif" value={data} onChange={e=>handleChangeRes(e,i)}/>
+              <button className="btn-fechar" onClick={()=>handleDeleteRes(i)}>X</button>
+              </div>
+              )
+          })}
+          </>
         </div>
       </div>
     </div>
